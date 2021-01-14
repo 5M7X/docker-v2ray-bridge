@@ -1,0 +1,62 @@
+{
+  "inbounds": [
+    {
+      "protocol": "socks",
+      "port": 1080,
+      "address": "0.0.0.0",
+      "tag": "socks-inbound",
+      "settings": {
+        "auth": "noauth",
+        "udp": false,
+        "ip": "127.0.0.1",
+        "userLevel": 0
+      }
+    },
+    {
+      "protocol": "http",
+      "port": 1081,
+      "address": "0.0.0.0",
+      "tag": "http-inbound",
+      "settings": {
+        "allowTransparent": false,
+        "userLevel": 0
+      }
+    }
+  ],
+  "outbounds": [
+    {
+      "protocol": "vmess",
+      "settings": {
+        "vnext": [
+          {
+            "address": "可以连接到你的家里的域名",
+            "port": server端口,
+            "users": [
+              {
+                "id": "同一uuid",
+                "alterId": 跟刚才一样的
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "wsSettings": {
+          "path": "/跟刚才一样的"
+        },
+        "tlsSettings": {
+          "serverName": "跟上面一样的，可以不一样，ssl的域名",
+          "allowInsecure": true
+        }
+      }
+    }
+  ],
+  "policy": {
+    "statsInboundUplink": false,
+    "statsInboundDownlink": false
+  },
+  "stats": {},
+  "other": {}
+}

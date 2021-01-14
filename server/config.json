@@ -1,0 +1,27 @@
+{
+  "inbounds": [
+    {
+      "port": 自定义暴露的v2ray端口,
+      "protocol": "vmess",
+      "settings": {
+        "clients": [
+          {
+            "id": "你自己的uuid",
+            "alterId": 越大越好的int
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "wsSettings": {
+          "path": "/随便起一个"
+        }
+      }
+    }
+  ],
+  "outbounds": [
+    {
+      "protocol": "freedom"
+    }
+  ]
+}

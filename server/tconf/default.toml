@@ -1,0 +1,7 @@
+[tls.stores]
+  [tls.stores.default]
+    [tls.stores.default.defaultCertificate]
+      certFile = "/data/ssl/cert.pem"
+      keyFile  = "/data/ssl/private.pem"
+
+[http.middlewares.gzip.compress]

@@ -1,0 +1,4 @@
+https://跟外面一样的域名 {
+  tls /data/ssl/cert.pem /data/ssl/private.pem
+  reverse_proxy "/跟外面一样的path" http://v2r:跟v2r配置中一样的端口 
+}
